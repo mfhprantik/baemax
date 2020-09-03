@@ -143,7 +143,8 @@
 
     // Sends jQuery post request when user dislikes someone
     function dislike(user_id) {
-        $.post('/dislike', {user_id : user_id}, function(response) {
+        _token = $('meta[name="csrf-token"]').attr('content');
+        $.post('/dislike', {user_id : user_id, _token : _token}, function(response) {
             $('#user_' + user_id).remove();
             if ($('.user-card').length == 0) $('.no-user-found').show();
         });
