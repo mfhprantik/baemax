@@ -137,10 +137,10 @@ class DashboardController extends Controller {
             $match = new Match;
             $match->user1_id = Auth::user()->id;
             $match->user2_id = $user_id;
-            $match->user1_status = 0;
+            $match->user1_status = 2;
             $match->save();
         } else {
-            $match->user2_status = 0;
+            $match->user2_status = 2;
             $match->save();
         }
     }
