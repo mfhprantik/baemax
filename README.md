@@ -1,2 +1,2 @@
 # baemax
-A simple dating web application built with Laravel Framework.
+ A simple dating web application built with Laravel Framework
